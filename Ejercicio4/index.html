@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+</head>
+<body>
+
+    <label for="lista"> Que desea comer? </label>
+    <select id="lista">
+        <option value="1">Hamburguesa</option>
+        <option value="2">Salchipapa</option>
+        <option value="3">Perrito Caliente</option>
+        <option value="4">carne asada</option>
+    </select>
+    <button onclick="precio()"> Precio </button>
+</body>
+<script>
+
+    function precio(){
+        let valor = document.getElementById("lista").value 
+
+        switch (valor){
+            case '1':
+                alert("La hamburguesa tiene un valor de 5000 pesos")
+                break;
+            case '2':
+                alert("La salchipapa tiene un valor de 3500 pesos")
+                break;
+            case '3':
+                alert("El perro caliente tiene un valor de 6500 pesos")
+                break;
+            case '4':
+                alert("La carne asada tiene un valor de 10500 pesos")
+                break;
+        }
+    }
+</script>
+</html>
