@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h2> Area del Triangulo </h2>
+
+    <br>
+    <label for="B"> Base </label>
+    <input type="number" id="B">
+    <label for="H"> Altura </label>
+    <input type="number" id="H">
+    <button id="area-triangulo" onclick="areatriangulo()"> Calcular </button>
+    <br>
+
+    <h2> Area del Cuadrado </h2>
+
+    <br>
+    <label for="L"> Lado </label>
+    <input type="number" id="L">
+    <button id="area-cuadrado" onclick="areacuadrado()"> Calcular </button>
+    <br>
+
+    <h2> Area del Círculo </h2>
+    <br>
+    <label for="R"> Radio </label>
+    <input type="number" id="R">
+    <button id="area-circulo" onclick="areacirculo()"> Calcular </button>
+    <br>
+
+</body>
+<script>
+
+    function areatriangulo(){
+
+        
+        let B = (document.getElementById("B").value)
+        let H = (document.getElementById("H").value)
+
+        if (B === "") {
+            alert("Debe ingresar el valor de la Base");
+            return true; } else { if (H === "") {
+            alert("Debe ingresar el valor de la Altura");
+            return true;
+            }else{
+            B = parseFloat(B)
+            H = parseFloat(H)
+            let resultado = ((B*H)/2)
+            alert("El área del triangulo es " + resultado)
+            }
+        }
+    }
+
+
+    function areacuadrado(){
+        let L = (document.getElementById("L").value)
+
+        if (L === ""){
+            alert("Debe ingresar el valor del Lado")
+        }else{
+            L = parseFloat(L)
+            let resultado = L*L
+            alert("El área del cuadrado es "+ resultado)
+        }
+    }
+
+    function areacirculo(){
+        let R = (document.getElementById("R").value)
+        if (R === ""){
+            alert("Por favor ingresar el valor del radio del circulo")
+        }else{
+            let pi = 3.1416
+            R = parseFloat(R)
+            let resultado = (pi*(R*R))
+            alert("El área del circulo es "+ resultado)
+        }
+    }
+</script>
+</html>
